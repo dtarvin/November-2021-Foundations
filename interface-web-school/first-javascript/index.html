@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First JavaScript</title>
+</head>
+<body>
+    <h1>This is my first attempt with JavaScript!</h1>
+
+    <script>
+        var total = 0;
+        total = total + 5;
+        total += 4;
+        total++;
+        console.log("The value of total is " + total);
+
+        var zombies = 13;
+
+        if (zombies > 15) {
+            console.log("aarrrggghh Zombies!!!");
+        } else if (zombies > 10) {
+            console.log("A few too many Zombies for my taste!");
+        } else {
+            console.log("Thank goodness there's not too many Zombies around here!");
+        }
+
+        var grade = 48;
+
+        if (grade >= 90) {
+            console.log("You got an A");
+        } else if (grade >= 80) {
+            console.log("You got a B");
+        } else if (grade >= 70) {
+            console.log("You got a C");
+        } else if (grade >= 60) {
+            console.log("You got a D");
+        } else {
+            console.log("You failed you dunce!");
+        }
+
+        var vampires = 13;
+        var night = false;
+        // if (vampires > 12 && night == true) {
+        //    console.log("SAVE ME FROM THE VAMPIRES!!!");
+        // } else if (vampires <= 12 && night == true) {
+        //    console.log("Please help me escape the vampires");
+        // } else if (vampires <= 12 && night == false) {
+        //    console.log("Thank goodness vampires sleep during the day!");
+        // }
+
+        if (night) {
+            if (vampires > 12) {
+                console.log("SAVE ME FROM THE VAMPIRES!!!");
+            } else {
+                console.log("Please help me escape the vampires");
+            }
+        } else if (!night) {
+            
+            console.log("Thank goodness vampires sleep during the day!");
+            
+        }
+
+        var cars = ["Volvo", "Toyota", "Subaru", "Ford"];
+        for (var i = 0; i < cars.length; i+=2) {
+            console.log("Car " + (i + 1) + " = " + cars[i]);
+        }
+
+        for (var i = 1; i <= 10; i++) {
+            console.log(i + " squared = " + i*i);
+        }
+
+        var i = 3;
+        while (i < cars.length) {
+            console.log("Car number " + (i + 1) + " is a " + cars[i]);
+            i++;
+        }
+
+        i = 11;
+        while (i <= 10) {
+            console.log(i + " times 3 = " + i*3);
+            i++;
+        }
+
+        do {
+            console.log(i + " times 4 = " + i*4);
+            i++; 
+        } while (i <= 10);
+
+        function addThreePlusFive() {
+            console.log("Three plus five = " + (3 + 5));
+        }
+        addThreePlusFive();
+
+        function addTwoNumbers(num1, num2) {
+            var sum = num1 + num2;
+            console.log(num1 + " + " + num2 + " = " + sum);
+        }
+
+        addTwoNumbers(5, 8);
+        addTwoNumbers(12,16);
+        addTwoNumbers(-2, 2);
+
+        var student = "Mike";
+
+        function helloStudent() {
+            console.log("Hello " + student);
+        }
+
+        helloStudent();
+        console.log("Hey " + student);
+
+        var secondStudent = "Cory";
+        function helloSecondStudent() {
+            var secondStudent = "Katie";
+            console.log("Hello " + secondStudent);
+        }
+
+        console.log("Hi there " + secondStudent);
+        helloSecondStudent();
+        console.log("Hi there " + secondStudent);
+
+        function helloThirdStudent() {
+            var thirdStudent = 'Joe';
+            console.log("What's up " + thirdStudent);
+        }
+        helloThirdStudent();
+        // console.log("How's it hangin' " + thirdStudent);
+
+        
+        function divisionAndRemainder(num1, num2) {
+            console.log(num1 + " divided by " + num2 + " is " + (num1 / num2) + " with " + (num1 % num2) + " left over.");
+        }
+        // 3 x 3 = 9, so if we divide 10 by 3, 3 goes into 10 3 times with 1 left over
+        divisionAndRemainder(10, 3);
+        // 4 x 3 = 12, if we divide 14 by 4, we get 3 with 2 left over
+        divisionAndRemainder(14, 4);
+        // 5 x 6 = 30, if we divide 30 by 5, we get 6 with 0 left over
+        divisionAndRemainder(30, 6);
+
+
+        function isVotingAge(name, age) {
+            var votable = (age < 18) ? "Too young" : "Old enough";
+            console.log(name + " is " + votable + " to vote.");
+        }
+
+        isVotingAge("John", 17);
+        isVotingAge("Pam", 35);
+
+        function werewolfCheck(areWolves) {
+            if (!areWolves) { // areWolves != true
+                console.log("No werewolves here!");
+            } else {
+                console.log("Werewolves! Get me outta here!");
+            }
+        }
+
+        werewolfCheck(true);
+        werewolfCheck(false);
+
+        function areTrekkiesHere(areOtherOfficers) {
+            var shatner = "Kirk";
+            let nimoy = "Spock";
+            const takai = "Sulu";
+            console.log("The Captain is " + shatner);
+            console.log("The First Officer is " + nimoy);
+            console.log("The pilot is " + takai);
+            if (areOtherOfficers) {
+                var nichols = "Uhura";
+                // let kelley = "Bones";
+            }
+            console.log("The Comms Officer is " + nichols);
+            // console.log("The Doctor is " + kelley);
+            // takai = "Checkov";
+            // console.log("The new pilot is " + takai);
+        }
+
+        {
+            const a = [1, 2, 3];
+            const b = {name: "hello"};
+
+            a.push(4, 5);  // mutating the value of constant "a"
+            b.name = "World"; // mutating the value of constant "b"
+
+            console.log(a);  // this will show [1, 2, 3, 4, 5]
+            console.log(b);  // this will show {name: "World"}
+        }
+
+        areTrekkiesHere(true);
+
+        {
+            const worker = "Bill";
+            const radius = "3.14";
+
+            const a = [1, 2, 3];
+            const b = {name: "Hello"};
+
+            // worker = "Joe";
+            // radius = radius + 1;
+            // a = [1,2,3,4,5];
+            // b = {name: "World"};
+        }
+
+        var vegetables = ["radish", "beets", "broccoli", "Brussel Sprouts", "Lima Beans"];
+
+        function listVegetables(veggies) {
+            veggies.forEach(function(veggie) {
+                console.log("I like to eat " + veggie);
+            });
+        }
+
+        listVegetables(vegetables);
+
+    </script>
+</body>
+</html>]
