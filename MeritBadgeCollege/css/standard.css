@@ -1,0 +1,44 @@
+/* Colors from the Boy Scout Style Guide - red: #ce1126; blue: #003f87;
+ * Typefaces: Roboto Slab Family, Roboto Condensed Family
+ * Scouts BSA Colors: Yellow: #FFCC00; Brown: #996633; Blue: #003f87; Red: #ce1126;
+ */
+
+body {
+    background-color: #d6cebd;
+    font-size: 2vh;
+    font-family: 'Roboto Slab', serif;
+    color: #243e2c;
+}
+
+.flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+nav {
+    margin-top: 1em;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 2vh;
+}
+
+a {
+    text-decoration: none;
+    color: #243e2c;
+}
+
+nav > a {
+    padding-right: 3vw;
+    font-size: 2em;
+}
+
+.logo {
+    height: 20vh;
+}
+
+header > h1 {
+    font-size: 6rem;
+    /* font-style: italic; */
+    text-align: center;
+}
